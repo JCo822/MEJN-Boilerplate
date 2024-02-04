@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Nutrient Density Rank By Price</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <h1>Food Nutrient Density Rank By Price (Beta)</h1>
+    </header>
+    <main>
+        <h2>How To Use This Tool</h2>
+        <p>
+            The goal of our tool is to help you make more nutrient-dense food choices that fit your budget and lifestyle. Fill out the form below to search for a food item and we'll show you its nutritional breakdown and cost per nutrient based on prices for that food product in your area. 
+        </p>
+        <form>
+            <label><strong>Estimated Daily Caloric Needs.</strong><br />Please use <a href="https://www.nal.usda.gov/human-nutrition-and-food-safety/dri-calculator">this tool</a> to find your estimated daily caloric needs.</label>
+            <input type="text">
+            <label for="name" >Sex</label>
+            <input type="radio" name="sex" id="Male">
+            <input type="radio" name="sex" id="Female">
+            <label><strong>Zip Code</strong></label>
+            <input type="text">
+            <label><strong>Food Product</strong></label>
+            <input type="text">
+            <button>Search</button>
+        </form>
+        <div>
+            <input type="text">
+            <button>Search</button>
+            <h2>Nutrient Type</h2>
+        </div>
+        <div>
+            <h2>DB Connection check</h2>
+            <ul>
+                <% for (let i=0; i < items.length; i++) {%>
+                    <li>
+                        <span><%= items[i].name %></span>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <section>
+            <h4>Subscribe For Updates</h4>
+        </section>
+        <section>
+            <h4>Connect With Us</h4>
+            <p>Facebook</p>
+            <p>Instagram</p>
+            <p>Threads</p>
+            <p>Email</p>
+        </section>
+        <section>Copyright Info</section>
+        <section>
+            <h4>Sources Include:</h4>
+            <p>
+                <ul>
+                    <li>Institute of Medicine. 2006. Dietary Reference Intakes: The Essential Guide to Nutrient Requirements. Washington, DC: The National Academies Press. <a>https://doi.org/10.17226/11537</a>.</li>
+                    <li>U.S. Department of Agriculture and U.S. Department of Health and Human Services. Dietary Guidelines for Americans, 2020-2025. 9th Edition. December 2020. Available at <a>DietaryGuidelines.gov</a>.</li>
+                </ul>
+                <br />
+                Note: Tool is currently calibrated to guidelines for adults ages 19 through 50. We'll provide updates as additional ages, categories, and features are added.
+            </p>
+        </section>
+        
+        
+    </footer>
+    <!--<script src="../js/nutrientRank.js"></script> -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
